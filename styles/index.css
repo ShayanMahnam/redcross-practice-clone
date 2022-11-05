@@ -2,6 +2,10 @@ body {
     margin: 0;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 p, h1, h2, h3, h4 {
     margin: 0;
     padding: 0;
@@ -11,6 +15,28 @@ fieldset {
    border: none;
    padding: 0;
     margin: 0;
+}
+
+.navigation {
+    display: none;
+}
+
+.search-button{
+    display: none;
+}
+
+@media screen and (min-width: 550px) {
+    .navigation {
+        display: block;
+    }
+
+    .search-button {
+        display: inline;
+    }
+
+    .hide-on-medium {
+        display: none;
+    }
 }
 
 .nav-items {
@@ -40,6 +66,7 @@ fieldset {
     padding: 10px 15px;
     font-size: 8px;
 }
+
 
 .left-border {
     border-left: 1px #a8a8a8 solid;
@@ -88,6 +115,17 @@ fieldset {
     object-fit: cover;
 }
 
+@media screen and (max-width: 640px){
+    .hero-image {
+        display: none;
+    }
+
+    .hero-content {
+        width: 66%;
+    }
+}
+
+
 .main-section {
     display: flex;
     justify-content: center;
@@ -115,7 +153,14 @@ fieldset {
 .form {
     display: flex;
     gap: 2%;
-};
+}
+
+@media screen and (max-width: 550px) {
+    .charity-search {
+        flex-direction: column;
+    }
+}
+
 
 .form-label {
     position: absolute;
@@ -129,6 +174,13 @@ fieldset {
     border-radius: 0;
     border-radius: 0px;
     border: 1px black solid;
+}
+
+@media screen and (max-width: 550px) {
+    .form-input {
+        margin-bottom: 10px;
+        padding: 7px;
+    }
 }
 
 
@@ -151,6 +203,19 @@ fieldset {
     height: 165px;
     background-color: red;
 }
+
+@media screen and (max-width: 550px) {
+    .donate-card {
+        width: 100%;
+    }
+
+    .card-img {
+        height: 300px;
+    }
+}
+
+
+
 
 .card-img img {
     width: 100%;
@@ -177,6 +242,12 @@ fieldset {
 .card-wrapper{
     display: flex;
     gap: 20px;
+}
+
+@media screen and (max-width:550px) {
+    .card-wrapper{
+        flex-direction: column;
+    }
 }
 
 
@@ -316,3 +387,7 @@ input[type='radio'] {
   input[type="checkbox"]:checked + .tick-wrapper .icon {
     display: block;
   }
+
+  /* min-width */
+  /* max-width */
+
