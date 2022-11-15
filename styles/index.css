@@ -17,12 +17,37 @@ fieldset {
     margin: 0;
 }
 
+
 .navigation {
-    display: none;
+    display: block; 
 }
+
+#check {
+    display: none; 
+}
+
+.nav-option {
+    display: none; 
+}
+
+
+
+#check:checked ~ .nav-option {
+    display: block; 
+}
+
+
+
 
 .search-button{
     display: none;
+}
+
+@media screen and (min-width:800px) {
+          .nav-option {
+    display: block;
+    margin: 1rem;
+}
 }
 
 @media screen and (min-width: 550px) {
@@ -39,14 +64,15 @@ fieldset {
     }
 }
 
+
 .nav-items {
     display: flex;
-    list-style-type: none;
-    margin: 0;
+    list-style: none;
+    
 }
 
 .nav-option {
-    padding: 13px;
+    padding: 2px;
 }
 
 .primary-button {
@@ -123,6 +149,7 @@ fieldset {
     .hero-content {
         width: 66%;
     }
+  
 }
 
 
@@ -159,6 +186,7 @@ fieldset {
     .charity-search {
         flex-direction: column;
     }
+  
 }
 
 
@@ -181,6 +209,8 @@ fieldset {
         margin-bottom: 10px;
         padding: 7px;
     }
+
+  
 }
 
 
@@ -212,6 +242,8 @@ fieldset {
     .card-img {
         height: 300px;
     }
+
+     
 }
 
 
@@ -248,7 +280,10 @@ fieldset {
     .card-wrapper{
         flex-direction: column;
     }
+   
 }
+
+
 
 
 
@@ -325,7 +360,7 @@ input[type='radio'] {
     box-shadow:0 0 5px 0px orange inset;
   } */
   
-  input[type='radio']:before {
+  /* input[type='radio']:before {
     content:'';
     display:block;
     width:80%;
@@ -335,16 +370,16 @@ input[type='radio'] {
   }
   input[type='radio']:checked:before {
     background:rgb(255, 91, 3);
-  }
+  } */
 
 
   /* checkbox styling */
-  input[type="checkbox"] {
+  /* input[type="checkbox"] {
     /* this removes the default css styling */
-    -webkit-appearance: none;
+    /* -webkit-appearance: none;
     appearance: none;
     background-color: #fff;
-    margin: 0;
+    margin: 0; */ 
 
     /* font: inherit;
     color: currentColor;
@@ -355,7 +390,7 @@ input[type='radio'] {
 
     display: grid;
     place-content: center; */
-  }
+  
 
   /* input[type="checkbox"]:before {
     content: "✓";
@@ -374,7 +409,7 @@ input[type='radio'] {
 
   /* sbg example */
 
-  .tick-wrapper {
+  /* .tick-wrapper {
     width: 15px;
     height: 15px;
     border: 1px black solid;
@@ -382,11 +417,11 @@ input[type='radio'] {
 
   .tick-wrapper svg {
     display: none;
-  }
+  } */
 
-  input[type="checkbox"]:checked + .tick-wrapper .icon {
+  /* input[type="checkbox"]:checked + .tick-wrapper .icon {
     display: block;
-  }
+  } */
 
   /* min-width */
   /* max-width */
